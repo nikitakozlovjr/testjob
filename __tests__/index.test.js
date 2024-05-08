@@ -1,4 +1,3 @@
-import test from 'node:test';
 import getWordCombination from '../task1/index.js';
 import getCommonDivisor from '../task2/index.js';
 import getListEven from '../task3/index.js';
@@ -23,4 +22,9 @@ test('task3', () => {
     expect(getListEven(11, 20)).toEqual([11, 13 , 17, 19]);
     expect(getListEven(7, 9)).toEqual([7]);
     expect(getListEven(21, 21)).toEqual([]);
+})
+
+test('task4', () => {
+    expect(new GenerateTableMultiplication(5).render()).toBe('   1  2  3  4  5 \n1  1  2  3  4  5 \n2  2  4  6  8  10 \n3  3  6  9  12  15 \n4  4  8  12  16  20 \n5  5  10  15  20  25 \n');
+    expect(new GenerateTableMultiplication(3).render()).toBe('   1  2  3 \n1  1  2  3 \n2  2  4  6 \n3  3  6  9 \n');
 })
